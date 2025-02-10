@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day 2024</title>
+    <link rel="stylesheet" href="vday.css">
+    <script>
+        function nextPage() {
+            window.location.href = "photo.html";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container" onclick="openEnvelope()">
+        <!-- Surat -->
+        <div class="letter">
+            <img src="inside.jpg" alt="Valentine's Message">
+            <div>
+                <audio controls>
+                    <source src="wave to earth - bad.mp3" type="audio/mp3">
+                </audio>  
+            </div>
+            <div class="hearts">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+              </div>
+              <div class="front"></div>
+              <div class="card"></div>
+            <div class="inside_text">
+                <h4>Dear My Pretty Darling,</h4>
+                <p>
+                    Happy Valentines Day babyyy, you are my girl for more than a year now(Forever :D)
+                    times really go so fast right? 
+                    We spend alot of times together now and for the next next years!
+                    You should know how much I LOVE YOU BABY, THANK YOU SO MUCHHH JESSICAAAA MY DARLING
+                </p>
+                <h3>With love, Felix Marvelian >.< ❤️</h3>
+            </div>
+        </div>
+
+        <!-- Amplop -->
+        <div class="envelope">
+            <div class="flap"></div>
+        </div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            document.querySelector(".container").classList.toggle("open");
+        }
+    </script>
+
+    <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Your Gallery <3</button>
+    </div>
+
+</body>
+</html>

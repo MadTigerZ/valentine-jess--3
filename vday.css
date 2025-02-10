@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container utama */
+.container {
+    position: relative;
+    width: 450px;
+    height: 700px; /* Tambah tinggi agar ada ruang lebih banyak */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Surat */
+.letter {
+    position: absolute;
+    width: 380px;
+    height: 680px; /* Panjang surat lebih besar */
+    background: #eae2b7;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(220px); /* Surat lebih turun sebelum keluar */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+    padding: 8px;
+}
+
+/* Saat surat keluar dari amplop */
+.open .letter {
+    transform: translateY(-50px); /* Surat tetap lebih ke bawah setelah keluar */
+    opacity: 1;
+    z-index: 4;
+}
+
+/* Gambar dalam surat */
+.letter img {
+    width: 80%;
+    max-width: 280px;
+    border-radius: 10px;
+    margin-top: 100px; /* Lebih turun ke bawah */
+}
+
+/* Teks dalam surat */
+.letter .inside_text {
+    font-size: 16px;
+    color: #A60657;
+    margin-top: 5px; /* Teks lebih turun ke bawah */
+    padding: 8px;
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+}
+
+/* Amplop di bawah */
+.envelope {
+    position: absolute;
+    bottom: 0; /* Amplop tetap di bagian bawah */
+    width: 400px;
+    height: 250px;
+    background: #ff6b81;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(255, 20, 147, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out;
+    z-index: 2;
+}
+
+/* Penutup amplop */
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #ff4d6d;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transition: transform 0.8s ease-in-out;
+    z-index: 3;
+}
+
+/* Efek buka amplop */
+.open .flap {
+    transform: rotateX(180deg);
+}
+
+.hearts {
+    position: absolute  
+}
+  
+  .one, .two, .three, .four, .five {
+    background-color: red;
+    display: inline-block;
+    height: 10px;
+    margin: 0 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    width: 10px;
+    top:50px;
+}
+  
+  .one:before,
+  .one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+  
+  .one:before, .two:before, .three:before, .four:before, .five:before {
+    top: -5px;
+    left: 0;
+}
+  
+  .one:after, .two:after, .three:after, .four:after, .five:after {
+    left: 5px;
+    top: 0;
+}
+    
+  .one {
+    left: -100px;
+    animation: heart 1s ease-out infinite; 
+}
+  
+  .two {
+    left: -70px;
+    animation: heart 2s ease-out infinite; 
+}
+  
+  .three {
+    left:50px;
+    animation: heart 1.5s ease-out infinite;
+}
+  
+  .four {
+    left:-70px;
+    animation: heart 2.3s ease-out infinite;
+}
+  
+  .five {
+    left:90px;
+    animation: heart 1.7s ease-out infinite;
+}
+  
+  @keyframes heart {
+    0%{
+      transform: translateY(0) rotate(-45deg) scale(0.3);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-150px) rotate(-45deg) scale(1.3);
+      opacity: 0.5;
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 20px;
+    border: 2px solid #ff6b81;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+}
+
+.btn:hover {
+    background-color: white;
+    color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+  
+  .card:before {
+    content:"";
+    position: absolute;
+    border:3px solid #003049;
+    border-style: dotted;
+    width: 365px;
+    heighT: 670px;
+    left:12px;
+    top:12px;
+}
