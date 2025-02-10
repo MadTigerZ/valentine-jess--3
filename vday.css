@@ -23,6 +23,9 @@ body {
 /* Surat */
 .letter {
     position: absolute;
+    content:"";
+    border:3px solid #003049;
+    border-style: dotted;
     width: 380px;
     height: 680px; /* Panjang surat lebih besar */
     background: #eae2b7;
@@ -101,7 +104,7 @@ body {
 }
 
 .hearts {
-    position: absolute  
+    position: absolute;  
 }
   
   .one, .two, .three, .four, .five {
@@ -198,13 +201,3 @@ body {
     box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
 }
   
-  .card:before {
-    content:"";
-    position: absolute;
-    border:3px solid #003049;
-    border-style: dotted;
-    width: 365px;
-    heighT: 670px;
-    left:12px;
-    top:12px;
-}
